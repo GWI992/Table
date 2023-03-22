@@ -4,12 +4,19 @@
     <header class="position-absolute top-0 start-0">
       <RouterLink to="/"><i class="bi bi-arrow-left"></i> Dashboard</RouterLink>
     </header>
+
+    <AvailableTables />
   </div>
 </template>
 
 <script>
+import AvailableTables from './administrator/AvailableTables.vue';
+
 export default {
   name: "Administrator",
+  components: {
+    AvailableTables,
+  },
 };
 </script>
 
