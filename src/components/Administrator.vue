@@ -6,16 +6,19 @@
     </header>
 
     <AvailableTables />
+    <NotAvailableTables />
   </div>
 </template>
 
 <script>
 import AvailableTables from './administrator/AvailableTables.vue';
+import NotAvailableTables from './administrator/NotAvailableTables.vue';
 
 export default {
   name: "Administrator",
   components: {
     AvailableTables,
+    NotAvailableTables,
   },
 };
 </script>
