@@ -69,7 +69,7 @@ export default {
 
             return undefined;
         })
-        .catch((err) => toast.error(err));
+        .catch((err) => toast.error(err.message));
     },
     delete(urlSuffix) {
         let url = APISettings.baseURL + urlSuffix;
@@ -93,6 +93,6 @@ export default {
 
             return undefined;
         })
-        .catch((err) => toast.error(err));
+        .catch((err) => toast.error(err.message));
     },
 }
