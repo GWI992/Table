@@ -22,10 +22,9 @@ export default {
             else {
                 toast.error('Some error happend.');
             }
-
             return undefined;
         })
-        .catch((err) => toast.error(err));
+        .catch((err) => toast.error(err.message));
     },
     post(urlSuffix, data) {
         let url = APISettings.baseURL + urlSuffix;
@@ -47,7 +46,7 @@ export default {
 
             return undefined;
         })
-        .catch((err) => toast.error(err));
+        .catch((err) => toast.error(err.message));
     },
     put(urlSuffix, data) {
         let url = APISettings.baseURL + urlSuffix;
