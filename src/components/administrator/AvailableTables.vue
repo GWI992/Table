@@ -16,7 +16,8 @@
         <td>{{ table.name }}</td>
         <td>{{ table.capacity }}</td>
         <td scope="col">
-          <button type="submit" class="btn btn-sm btn-warning mb-3" v-on:click="disable(table)" title="Disable"><i class="bi bi-slash-circle"></i></button>
+          <RouterLink :to="{ path: '/administrator/table/edit/' + table.name}" title="Edit" class="btn btn-sm btn-secondary mb-3 ms-1"><i class="bi bi-pencil"></i></RouterLink>
+          <button type="submit" class="btn btn-sm btn-warning mb-3 ms-1" v-on:click="disable(table)" title="Disable"><i class="bi bi-slash-circle"></i></button>
           <button type="submit" class="btn btn-sm btn-danger mb-3 ms-1" v-on:click="del(table)" title="Delete"><i class="bi bi-trash3"></i></button>
         </td>
       </tr>

@@ -19,6 +19,11 @@ const router = createRouter({
       component: () => import('../components/administrator/Create.vue')
     },
     {
+      path: '/administrator/table/edit/:id',
+      name: 'administrator edit table',
+      component: () => import('../components/administrator/Edit.vue')
+    },
+    {
       path: '/manager',
       name: 'manager',
       component: () => import('../views/ManagerView.vue')
