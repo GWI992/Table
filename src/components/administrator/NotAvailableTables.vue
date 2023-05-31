@@ -7,6 +7,7 @@
         <th scope="col">#</th>
         <th scope="col">Name</th>
         <th scope="col">Capacity</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -14,6 +15,9 @@
         <td>{{ table.id }}</td>
         <td>{{ table.name }}</td>
         <td>{{ table.capacity }}</td>
+        <td scope="col">
+          <button type="submit" class="btn btn-sm btn-success mb-3" v-on:click="enable(table)">Enable</button>
+        </td>
       </tr>
     </tbody>
   </table>
@@ -38,9 +42,13 @@ export default {
   },
   methods: {
     async fetchData() {
-      let data = await API.get("/admin/getNotAvailableTables");
+      let data = await API.get("/table/admin/getAvailableTables");
       this.notAvailableTables = (data == undefined) ? [] : data;
     },
+    async enable(table) {
+      let data = await API.put('/table/admin/enable/' + table.name);
+      setTimeout(() => {this.$router.go(0)}, 2000);
+    }
   },
 };
 </script>
