@@ -12,6 +12,7 @@
       </div>
       <div class="col col-6">
         <div>
+          <FreeTables />
         </div>
       </div>
     </div>
@@ -19,11 +20,13 @@
 </template>
 
 <script>
+import FreeTables from './manager/FreeTables.vue';
 import ReservedTables from './manager/ReservedTables.vue';
 
 export default {
   name: "Manager",
   components: {
+    FreeTables,
     ReservedTables,
   },
 };
