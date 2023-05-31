@@ -4,6 +4,9 @@
     <header class="position-absolute top-0 start-0">
       <RouterLink to="/"><i class="bi bi-arrow-left"></i> Dashboard</RouterLink>
     </header>
+
+    <hr>
+
     <div class="row">
       <div class="col col-6">
         <div>
