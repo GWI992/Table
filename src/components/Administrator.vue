@@ -5,8 +5,18 @@
       <RouterLink to="/"><i class="bi bi-arrow-left"></i> Dashboard</RouterLink>
     </header>
 
-    <AvailableTables />
-    <NotAvailableTables />
+    <div class="row">
+      <div class="col col-6">
+        <div>
+          <AvailableTables />
+        </div>
+      </div>
+      <div class="col col-6">
+        <div>
+          <NotAvailableTables />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
