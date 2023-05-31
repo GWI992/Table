@@ -5,6 +5,14 @@
       <RouterLink to="/"><i class="bi bi-arrow-left"></i> Dashboard</RouterLink>
     </header>
 
+    <div class="row">
+      <div class="col col-10">
+      </div>
+      <div class="col col-2">
+        <a href="/manager/table/reserve" class="btn btn-info">Reserve table</a>
+      </div>
+    </div>
+
     <hr>
 
     <div class="row">

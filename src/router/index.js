@@ -28,6 +28,11 @@ const router = createRouter({
       name: 'manager',
       component: () => import('../views/ManagerView.vue')
     },
+    {
+      path: '/manager/table/reserve',
+      name: 'manager reserve table',
+      component: () => import('../components/manager/Reserve.vue')
+    },
   ]
 })
 
