@@ -6,6 +6,14 @@
     </header>
 
     <div class="row">
+      <div class="col col-10">
+      </div>
+      <div class="col col-2">
+        <a href="/administrator/table/create" class="btn btn-info">New table</a>
+      </div>
+    </div>
+
+    <div class="row">
       <div class="col col-6">
         <div>
           <AvailableTables />
