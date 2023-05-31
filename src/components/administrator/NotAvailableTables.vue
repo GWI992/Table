@@ -16,7 +16,8 @@
         <td>{{ table.name }}</td>
         <td>{{ table.capacity }}</td>
         <td scope="col">
-          <button type="submit" class="btn btn-sm btn-success mb-3" v-on:click="enable(table)">Enable</button>
+          <button type="submit" class="btn btn-sm btn-success mb-3" v-on:click="enable(table)" title="Enable"><i class="bi bi-check"></i></button>
+          <button type="submit" class="btn btn-sm btn-danger mb-3 ms-1" v-on:click="del(table)" title="Delete"><i class="bi bi-trash3"></i></button>
         </td>
       </tr>
     </tbody>
@@ -47,6 +48,10 @@ export default {
     },
     async enable(table) {
       let data = await API.put('/table/admin/enable/' + table.name);
+      setTimeout(() => {this.$router.go(0)}, 2000);
+    },
+    async del(table) {
+      let data = await API.put('/table/admin/delete/' + table.name);
       setTimeout(() => {this.$router.go(0)}, 2000);
     }
   },
